@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bricks"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="10dp"
+       android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/password_bg"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="patient name:"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/pname"
+            android:background="@drawable/edtbg"
+            android:padding="5dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/password_bg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="father name:"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/fname"
+            android:padding="5dp"
+            android:background="@drawable/edtbg"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/password_bg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="2dp"
+            android:text="mother name:"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/mname"
+            android:padding="5dp"
+            android:background="@drawable/edtbg"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/password_bg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="phone 1:"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ph1"
+            android:padding="5dp"
+            android:background="@drawable/edtbg"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/password_bg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="phone 2:"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ph2"
+            android:padding="5dp"
+            android:background="@drawable/edtbg"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/password_bg"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="password:"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/password"
+            android:padding="5dp"
+            android:background="@drawable/edtbg"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/password_bg"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="address:"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="230dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/add"
+            android:lines="4"
+            android:background="@drawable/edtbg"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_gravity="center"
+        android:text="Register"
+        android:textSize="20dp"
+        android:id="@+id/reg"
+        android:backgroundTint="#000000"/>
+
+
+</LinearLayout>
