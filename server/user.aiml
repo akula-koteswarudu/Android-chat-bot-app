@@ -1,0 +1,229 @@
+<?xml version="1.0.1" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>*</pattern>
+        <template><think><set name="inp"><star/></set></think>
+            <condition name ='ph'>
+                <li value="yes">
+                    <condition name="inp">
+                        <li value="1">call <get name="pno1"/><think><set name='ph'></set></think></li>
+                        <li value="2">call <get name="pno2"/><think><set name='ph'></set></think></li>
+                        <li value="3">call 9505793178<think><set name='ph'></set></think></li>
+                        <li value="4">call 1234567894<think><set name='ph'></set></think></li>
+                        <li>enter a valid serial number from above list</li>
+                    </condition>
+                </li>
+                <li>I have no answer for that</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>google *</pattern>
+        <template>open google</template>
+    </category>
+
+    <category>
+        <pattern>open *</pattern>
+        <template>open app</template>
+    </category>
+
+    <category>
+        <pattern>open *</pattern>
+        <template>open app</template>
+    </category>
+    
+    <category>
+        <pattern>what * contact *</pattern>
+        <template>these are your family contacts<br/>1) <get name="pno1"/><br/>2) <get name="pno2"/></template>
+    </category>
+
+    <category>
+        <pattern>what * contacts *</pattern>
+        <template>these are your family contacts<br/>1) <get name="pno1"/><br/>2) <get name="pno2"/></template>
+    </category>
+    <category>
+        <pattern>contact *</pattern>
+        <template>these are your family contacts<br/>1) <get name="pno1"/><br/>2) <get name="pno2"/></template>
+    </category>
+    <category>
+        <pattern>contacts *</pattern>
+        <template>these are your family contacts<br/>1) <get name="pno1"/><br/>2) <get name="pno2"/></template>
+    </category>
+    <category>
+        <pattern>emergency *</pattern>
+        <template>these are available emergency contacts for you<br/>1) <get name="pno1"/><br/>2) <get name="pno2"/><br/>
+        3)9505793178<br/> 4)1234567894</template>
+    </category>
+
+    <category>
+        <pattern>call my *</pattern>
+        <template><think><set name='inp'><star/></set></think>
+            <condition name ='inp'>
+                <li value="father">call <get name="pno1"/></li>
+                <li value="mother">call <get name="pno2"/></li>
+                <li>choose one of the numbers below <br/>1) <get name="pno1"/><br/>2) <get name="pno2"/><br/>
+                    3)9505793178<br/>4)1234567894<think><set name='ph'>yes</set></think></li>
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>call *</pattern>
+        <template><srai>call my <star/></srai></template>
+    </category>
+
+
+    <category>
+        <pattern>what * emergency *</pattern>
+        <template>these are available emergency contacts for you<br/>1) <get name="pno1"/><br/>2) <get name="pno2"/><br/>
+        3)9505793178<br/>4)1234567894</template>
+    </category>
+    
+    <category>
+        <pattern>tell me *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>give me *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>some *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>an *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>a *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+
+    <category>
+        <pattern>what is my name</pattern>
+        <template>you are <get name='name'/>. </template>
+    </category>
+
+    <category>
+        <pattern>okay *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>ok *</pattern>
+        <template><srai><star/></srai></template>
+    </category>
+    
+
+    <category>
+        <pattern>i * remember my *</pattern>
+        <template><think><set name="inp"><star index="2"/></set></think> 
+            <condition name ='inp'>
+                <li value='name'><srai>what is my name</srai></li>
+                <li value='parents'><srai>who are my parents</srai></li>
+                <li value='address'><srai>address</srai></li>
+
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>i forgot my *</pattern>
+        <template>
+            <srai>i dont remember my <star/></srai>
+        </template>
+    </category>
+
+  
+    <category>
+        <pattern>who are my *</pattern>
+        <template>your father is <get name='fname'/> and your mother is <get name='mname'/></template>
+    </category>
+
+    <category>
+        <pattern>who is my *</pattern>
+        <template>your father is <get name='fname'/> and your mother is <get name='mname'/></template>
+    </category>
+
+
+    <category>
+        <pattern>alzheimer</pattern>
+        <template>you have Alzheimer which is a disease that causes patients to struggle with
+        short-term memory loss .But, don't worry i am there for you.</template>
+    </category>
+    <category>
+        <pattern>why i am here</pattern>
+        <template>Because <srai>alzheimer</srai></template>
+    </category>
+    <category>
+        <pattern>what happened to me</pattern>
+        <template><srai>alzheimer</srai></template>
+    </category>
+    <category>
+        <pattern>where am i</pattern>
+        <template>you are in a memory treatment hospital Because <srai>alzheimer</srai></template>
+    </category>
+    <category>
+        <pattern>address</pattern>
+        <template>you live here <get name='address'/> Do you want me to guide you home?<think><set name="map">yes</set></think> </template>
+    </category>
+
+    <category>
+        <pattern>yes</pattern>
+        <template>
+            <condition name="map">
+                <li value="yes">open maps<think><set name="map"></set></think></li>
+                <li>what yes?</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>No</pattern>
+        <template>
+            <condition name="map">
+                <li value="yes">ok<think><set name="map"></set></think></li>
+                <li>what No?</li>
+            </condition>
+        </template>
+    </category>   
+
+    <category>
+        <pattern>where * parents</pattern>
+        <template>your parents may be at your home</template>
+    </category> 
+
+    <category>
+        <pattern>how do i go home</pattern>
+        <template><srai>address</srai></template>
+    </category>   
+
+    <category>
+        <pattern>where is my *</pattern>
+        <template><think><set name="inp"><star/></set></think>
+            <condition name ="inp">
+                <li value="father"><srai>where are my parents</srai></li>
+                <li value="mother"><srai>where are my parents</srai></li>
+                <li value="parents"><srai>where are my parents</srai></li>
+                <li value="home"><srai>address</srai></li>
+                <li>i don't know</li>
+
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>where do i live</pattern>
+        <template><srai>address</srai></template>
+    </category>   
+
+  
+
+
+</aiml>

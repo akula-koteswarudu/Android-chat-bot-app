@@ -1,0 +1,51 @@
+<?xml version="1.0.1" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>hello *</pattern>
+        <template><srai>HI</srai></template>
+    </category> 
+    <category>
+        <pattern>hello</pattern>
+        <template><srai>HI</srai></template>
+    </category>
+    <category>
+      <pattern>HI</pattern>
+      <template>
+          <random>
+              <li>hello</li>
+              <li>hi there</li>
+              <li>good to see you</li>
+              <li>hello, how can i help you?</li>
+          </random>
+      </template>
+    </category>
+
+    <category>
+        <pattern>who are you</pattern>
+        <template>I am your memory assistant. you can ask me about you.</template>
+    </category>
+
+    <category>
+        <pattern>what is your *</pattern>
+        <template><think><set name="inp"><star/></set></think> 
+            <condition name='inp'>
+                <li value='name'>I am chatbot. you can call me bot.</li>
+                <li value='age'>I am one year old.</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>who is your *</pattern>
+        <template><think><set name="inp"><star/></set></think> 
+            <condition name='inp'>
+                <li value='creator'>my creator is koteswarudu</li>
+                <li value='owner'>my owner is koteswarudu.</li>
+                <li>That is not relavant for me but my creator is koteswarudu</li>
+            </condition>
+        </template>
+    </category>
+
+
+</aiml>
